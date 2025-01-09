@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Record Name -->
+    <TextView
+        android:id="@+id/tv_record_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Record Details -->
+    <TextView
+        android:id="@+id/tv_record_details"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:text="Details of the record will be displayed here."
+        android:scrollbars="vertical"
+        android:textSize="16sp" />
+</LinearLayout>
+
