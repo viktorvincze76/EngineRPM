@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
@@ -312,18 +313,23 @@ public class MainActivity extends AppCompatActivity {
         // Find views in the inflated layout
         TextView tvRecordName = linearLayout.findViewById(R.id.tv_record_name);
         TextView tvRecordDetails = linearLayout.findViewById(R.id.tv_record_details);
+        Button btnBack = detailView.findViewById(R.id.tv_record_backButton); // Reference the new back button
+
+        // Enable scrolling for the TextView
+        tvRecordDetails.setMovementMethod(new android.text.method.ScrollingMovementMethod());
 
         // Populate the record details
         tvRecordName.setText(recordName);
         tvRecordDetails.setText(getRecordDetails(recordName));
+        tvRecordDetails.setVerticalScrollBarEnabled(true);
 
         // Replace the current content with the record detail view
-        setContentView(linearLayout);
+        //setContentView(linearLayout);
 
         // Add a back button in the detail view
-        Button btnBack = new Button(this);
-        btnBack.setText("Back");
-        btnBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
+        //Button btnBack = new Button(this);
+        //btnBack.setText("Back");
+        //btnBack.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
         btnBack.setOnClickListener(v -> {
             Log.d("MainActivity", "Back button pressed. Returning to main view.");
             showMainScreen();
@@ -331,7 +337,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Add the back button programmatically
-        linearLayout.addView(btnBack);
+        //linearLayout.addView(btnBack);
+
+        // Replace the current content with the record detail view
+        setContentView(linearLayout);
     }
 
     // Helper method to get record details from the file

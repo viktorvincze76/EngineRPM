@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:nestedScrollingEnabled="true">
+    tools:context=".MainActivity">
 
     <!-- Record Name -->
     <TextView
@@ -19,20 +19,26 @@
     <ListView
         android:id="@+id/recordValuesListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="580dp"
+        android:layout_margin="16dp"
         android:background="@drawable/back"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:scrollbars="vertical"
-        android:nestedScrollingEnabled="true"/>
+        android:text="Saved records"
+        android:textSize="12sp"/>
 
     <!-- Back Button -->
     <Button
         android:id="@+id/backButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#2196F3"
         android:text="Back"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:layout_margin="8dp" />
+        android:textColor="#FFFFFF" />
 </LinearLayout>
