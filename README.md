@@ -1,0 +1,1 @@
+This app has been created on demand for a tool which airplane modelers can use to measure the RPM of the model engines midair. What makes it special is, that it's focusing on the needs of the F2A category, so 1 cylinder engine with a special 1 blade prop.
